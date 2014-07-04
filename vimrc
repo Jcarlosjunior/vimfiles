@@ -15,6 +15,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'ahayman/vim-nodejs-complete'
 Plugin 'bling/vim-airline'
+Plugin 'mustache/vim-mustache-handlebars'
 
 let NERDTreeHijackNetrw = 1
 
