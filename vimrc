@@ -20,8 +20,10 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'teranex/jk-jumps.vim'
 Plugin 'rstacruz/sparkup'
+Plugin 'vim-scripts/indenthtml.vim'
 
 call vundle#end()            " required
+filetype on
 filetype plugin on
 filetype plugin indent on 
 
@@ -30,7 +32,9 @@ set background=dark
 colorscheme solarized
 
 let NERDTreeHijackNetrw = 1
-
+let g:html_indent_inctags = "li"
+set autoindent 
+set cindent 
 " ##### Basic options  {{{
 " Display incomplete commands.
 set showcmd
