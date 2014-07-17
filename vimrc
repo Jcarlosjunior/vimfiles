@@ -30,7 +30,7 @@ filetype plugin indent on
 syntax enable
 set background=dark
 colorscheme solarized
-
+set noswapfile
 let NERDTreeHijackNetrw = 1
 let g:html_indent_inctags = "li"
 set autoindent 
