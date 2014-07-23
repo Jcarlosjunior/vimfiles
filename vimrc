@@ -88,6 +88,7 @@ set tabstop=4
 " And again, related.
 set shiftwidth=4
 
+set expandtab
 " Files open expanded
 set foldlevelstart=20
 " Use decent folding
@@ -126,3 +127,7 @@ inoremap <C-@> <C-Space>
 let g:ctrlp_working_path_mode = 'a'
 " Custom ignores
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store'
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
