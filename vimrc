@@ -19,6 +19,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rstacruz/sparkup'
 Plugin 'vim-scripts/indenthtml.vim'
+Plugin 'wookiehangover/jshint.vim'
 
 call vundle#end()            " required
 filetype on
@@ -82,9 +83,9 @@ set nowritebackup
 set directory=$HOME/.vim/tmp//,.
 
 " Global tab width.
-set tabstop=4
+set tabstop=2
 " And again, related.
-set shiftwidth=4
+set shiftwidth=2
 
 set expandtab
 " Files open expanded
@@ -119,8 +120,7 @@ nnoremap <leader>d <C-w>q
 " Toggles folding with space
 nnoremap <leader><Space> za
 
-inoremap <C-Space> <C-x><C-o>
-inoremap <C-@> <C-Space>
+inoremap <C-a> <C-x><C-o>
 
 let g:ctrlp_working_path_mode = 'a'
 " Custom ignores
