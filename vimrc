@@ -1,17 +1,18 @@
 set nocompatible              " be iMproved, required filetype off                  " required 
 :let maplocalleader = ',' 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()	
+set rtp+=~/vimfiles/bundle/Vundle.vim/
+let path='~/vimfiles/bundle'
+call vundle#begin(path)
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'Raimondi/delimitMate'
-Plugin 'marijnh/tern_for_vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'bling/vim-airline'
 Plugin 'mustache/vim-mustache-handlebars'
@@ -19,13 +20,17 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'rstacruz/sparkup'
 Plugin 'vim-scripts/indenthtml.vim'
-Plugin 'wookiehangover/jshint.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'msanders/snipmate.vim'
 
 call vundle#end()            " required
 filetype on
 filetype plugin on
 filetype plugin indent on 
 
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
 syntax enable
 set background=dark
 colorscheme solarized
@@ -33,7 +38,7 @@ set noswapfile
 let NERDTreeHijackNetrw = 1
 let g:html_indent_inctags = "li"
 set autoindent 
-set cindent 
+set cindent
 " ##### Basic options  {{{
 " Display incomplete commands.
 set showcmd
@@ -110,19 +115,34 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <C-b> :bn<CR> 
 
 " Create windows
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>m <C-w>s<C-w>j
-nnoremap <leader>d <C-w>q
+nnoremap <leader>d :bd<CR>
+nnoremap <leader>q <C-w>q
 " }}}
 " ##### Folding {{{
 " Toggles folding with space
 nnoremap <leader><Space> za
 
 inoremap <C-a> <C-x><C-o>
-
+let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_working_path_mode = 'a'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_enable_signs = 1
+let g:syntastic_aggregate_errors = 1
+
 " Custom ignores
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store'
 let g:solarized_termcolors=256
