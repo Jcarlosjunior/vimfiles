@@ -1,11 +1,10 @@
 set nocompatible              " be iMproved, required filetype off                  " required 
 :let maplocalleader = ',' 
-set rtp+=~/vimfiles/bundle/Vundle.vim/
-let path='~/vimfiles/bundle'
-call vundle#begin(path)
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-fugitive'
@@ -22,6 +21,8 @@ Plugin 'rstacruz/sparkup'
 Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'msanders/snipmate.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
 
 call vundle#end()            " required
 filetype on
