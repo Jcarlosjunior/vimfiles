@@ -8,6 +8,7 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-fugitive'
+Plugin 'kljohann/vim-gitmodeline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
@@ -23,6 +24,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'msanders/snipmate.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'groenewege/vim-less'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()            " required
 filetype on
